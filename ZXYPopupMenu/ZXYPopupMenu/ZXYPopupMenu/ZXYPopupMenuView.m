@@ -120,6 +120,7 @@
     self.isShowShadow = YES;
     _dismissOnSelected = YES;
     _dismissOnTouchOutside = YES;
+    _isArrowPosition = YES;
     _fontSize = 15;
     _textColor = [UIColor blackColor];
     _offset = 0.0;
@@ -673,9 +674,15 @@
     [self updateUI];
 }
 
+- (void)setIsArrowPosition:(BOOL)isArrowPosition{
+    
+    _isArrowPosition = isArrowPosition;
+    [self updateUI];
+}
+
 - (void)drawRect:(CGRect)rect
 {
-    UIBezierPath *bezierPath = [ZXYPopupMenuPath zxy_bezierPathWithRect:rect rectCorner:_rectCorner cornerRadius:_cornerRadius borderWidth:_borderWidth borderColor:_borderColor backgroundColor:_backColor arrowWidth:_arrowWidth arrowHeight:_arrowHeight arrowPosition:_arrowPosition arrowDirection:_arrowDirection];
+    UIBezierPath *bezierPath = [ZXYPopupMenuPath zxy_bezierPathWithRect:rect rectCorner:_rectCorner cornerRadius:_cornerRadius borderWidth:_borderWidth borderColor:_borderColor backgroundColor:_backColor arrowWidth:_arrowWidth arrowHeight:_arrowHeight arrowPosition:_arrowPosition isArrowPosition:_isArrowPosition arrowDirection:_arrowDirection];
     [bezierPath fill];
     [bezierPath stroke];
 }

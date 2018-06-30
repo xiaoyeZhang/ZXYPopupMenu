@@ -18,24 +18,26 @@
                             arrowWidth:(CGFloat)arrowWidth
                            arrowHeight:(CGFloat)arrowHeight
                          arrowPosition:(CGFloat)arrowPosition
+                        isArrowPosition:(BOOL)isArrowPosition
                         arrowDirection:(ZXYPopupMenuArrowDirection)arrowDirection
 {
     CAShapeLayer *shapeLayer = [CAShapeLayer layer];
-    shapeLayer.path = [self zxy_bezierPathWithRect:rect rectCorner:rectCorner cornerRadius:cornerRadius borderWidth:0 borderColor:nil backgroundColor:nil arrowWidth:arrowWidth arrowHeight:arrowHeight arrowPosition:arrowPosition arrowDirection:arrowDirection].CGPath;
+    shapeLayer.path = [self zxy_bezierPathWithRect:rect rectCorner:rectCorner cornerRadius:cornerRadius borderWidth:0 borderColor:nil backgroundColor:nil arrowWidth:arrowWidth arrowHeight:arrowHeight arrowPosition:arrowPosition isArrowPosition:isArrowPosition arrowDirection:arrowDirection].CGPath;
     return shapeLayer;
 }
 
 
 + (UIBezierPath *)zxy_bezierPathWithRect:(CGRect)rect
-                             rectCorner:(UIRectCorner)rectCorner
-                           cornerRadius:(CGFloat)cornerRadius
-                            borderWidth:(CGFloat)borderWidth
-                            borderColor:(UIColor *)borderColor
-                        backgroundColor:(UIColor *)backgroundColor
-                             arrowWidth:(CGFloat)arrowWidth
-                            arrowHeight:(CGFloat)arrowHeight
-                          arrowPosition:(CGFloat)arrowPosition
-                         arrowDirection:(ZXYPopupMenuArrowDirection)arrowDirection
+                              rectCorner:(UIRectCorner)rectCorner
+                            cornerRadius:(CGFloat)cornerRadius
+                             borderWidth:(CGFloat)borderWidth
+                             borderColor:(UIColor *)borderColor
+                         backgroundColor:(UIColor *)backgroundColor
+                              arrowWidth:(CGFloat)arrowWidth
+                             arrowHeight:(CGFloat)arrowHeight
+                           arrowPosition:(CGFloat)arrowPosition
+                         isArrowPosition:(BOOL)isArrowPosition
+                          arrowDirection:(ZXYPopupMenuArrowDirection)arrowDirection
 {
     UIBezierPath *bezierPath = [UIBezierPath bezierPath];
     if (borderColor) {
@@ -60,6 +62,11 @@
     }
     if (rectCorner & UIRectCornerBottomRight) {
         bottomRightRadius = cornerRadius;
+    }
+    
+    if (!isArrowPosition) {
+        
+        arrowDirection = ZXYPopupMenuArrowDirectionNone;
     }
     
     if (arrowDirection == ZXYPopupMenuArrowDirectionTop) {

@@ -95,7 +95,9 @@ typedef NS_ENUM(NSInteger , ZXYPopupMenuPriorityDirection) {
  */
 @property (nonatomic, assign) BOOL dismissOnTouchOutside;
 
-
+/**
+ 是否显示箭头
+ */
 @property (nonatomic, assign) BOOL isArrowPosition;
 
 /**

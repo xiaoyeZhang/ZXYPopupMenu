@@ -43,9 +43,6 @@
         
     }];
     
-//    [ZXYPopupMenuView showRelyOnView:self.view titles:TITLES icons:nil menuWidth:110 otherSettings:^(ZXYPopupMenuView *popupMenu) {
-//
-//    }];
 }
 
 - (void)zxyPopupMenu:(ZXYPopupMenuView *)zxyPopupMenu didSelectedAtIndex:(NSInteger)index{

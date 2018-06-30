@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, ZXYPopupMenuArrowDirection) {
                             arrowWidth:(CGFloat)arrowWidth
                            arrowHeight:(CGFloat)arrowHeight
                          arrowPosition:(CGFloat)arrowPosition
+                          isArrowPosition:(BOOL)isArrowPosition
                         arrowDirection:(ZXYPopupMenuArrowDirection)arrowDirection;
 
 + (UIBezierPath *)zxy_bezierPathWithRect:(CGRect)rect
@@ -36,6 +37,7 @@ typedef NS_ENUM(NSInteger, ZXYPopupMenuArrowDirection) {
                              arrowWidth:(CGFloat)arrowWidth
                             arrowHeight:(CGFloat)arrowHeight
                           arrowPosition:(CGFloat)arrowPosition
+                         isArrowPosition:(BOOL)isArrowPosition
                          arrowDirection:(ZXYPopupMenuArrowDirection)arrowDirection;
 
 
