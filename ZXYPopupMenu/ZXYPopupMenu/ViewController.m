@@ -10,6 +10,7 @@
 #import "ZXYPopupMenuView.h"
 
 #define TITLES @[@"扫一扫",@"付款"]
+#define TITLESTWO @[@"支付宝",@"微信"]
 
 @interface ViewController ()<ZXYPopupMenuViewDelegate>
 
@@ -19,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     
 }
 
@@ -44,7 +46,14 @@
     }];
     
 }
-
+- (IBAction)isBtnClick:(UIButton *)sender {
+    
+    [ZXYPopupMenuView showRelyOnView:sender titles:TITLESTWO icons:nil menuWidth:80 otherSettings:^(ZXYPopupMenuView *popupMenu) {
+       
+        
+    }];
+}
+    
 - (void)zxyPopupMenu:(ZXYPopupMenuView *)zxyPopupMenu didSelectedAtIndex:(NSInteger)index{
     
     //推荐回调
