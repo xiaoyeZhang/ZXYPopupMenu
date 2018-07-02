@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B8CE0139192753674B8D842 /* libPods-ZXYPopupMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF47D69BB8A7C696794569D /* libPods-ZXYPopupMenu.a */; };
 		2EDC4F0A20E5BCFB0003A85D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0920E5BCFB0003A85D /* AppDelegate.m */; };
 		2EDC4F0D20E5BCFB0003A85D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0C20E5BCFB0003A85D /* ViewController.m */; };
 		2EDC4F1020E5BCFB0003A85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0E20E5BCFB0003A85D /* Main.storyboard */; };
@@ -60,6 +61,9 @@
 		2EDC4F3F20E611BA0003A85D /* ZXYPopupMenuPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXYPopupMenuPath.m; sourceTree = "<group>"; };
 		2EDC4F4220E612730003A85D /* ZXYRectConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXYRectConst.h; sourceTree = "<group>"; };
 		2EDC4F4320E612730003A85D /* ZXYRectConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXYRectConst.m; sourceTree = "<group>"; };
+		5E716E308C15A0AB3201DC16 /* Pods-ZXYPopupMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXYPopupMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXYPopupMenu/Pods-ZXYPopupMenu.debug.xcconfig"; sourceTree = "<group>"; };
+		6705FFC8C6BFF84E48FB22A0 /* Pods-ZXYPopupMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXYPopupMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXYPopupMenu/Pods-ZXYPopupMenu.release.xcconfig"; sourceTree = "<group>"; };
+		6DF47D69BB8A7C696794569D /* libPods-ZXYPopupMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXYPopupMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B8CE0139192753674B8D842 /* libPods-ZXYPopupMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,8 @@
 				2EDC4F2020E5BCFC0003A85D /* ZXYPopupMenuTests */,
 				2EDC4F2B20E5BCFC0003A85D /* ZXYPopupMenuUITests */,
 				2EDC4F0620E5BCFB0003A85D /* Products */,
+				DAAD78C2CD4ECEAA91109353 /* Pods */,
+				4815C43A1C1900B87E6A4A83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +162,23 @@
 			path = ZXYPopupMenu;
 			sourceTree = "<group>";
 		};
+		4815C43A1C1900B87E6A4A83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6DF47D69BB8A7C696794569D /* libPods-ZXYPopupMenu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAAD78C2CD4ECEAA91109353 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E716E308C15A0AB3201DC16 /* Pods-ZXYPopupMenu.debug.xcconfig */,
+				6705FFC8C6BFF84E48FB22A0 /* Pods-ZXYPopupMenu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2EDC4F3120E5BCFC0003A85D /* Build configuration list for PBXNativeTarget "ZXYPopupMenu" */;
 			buildPhases = (
+				35A6C25F7577362211D0B19D /* [CP] Check Pods Manifest.lock */,
 				2EDC4F0120E5BCFB0003A85D /* Sources */,
 				2EDC4F0220E5BCFB0003A85D /* Frameworks */,
 				2EDC4F0320E5BCFB0003A85D /* Resources */,
@@ -279,6 +304,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35A6C25F7577362211D0B19D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ZXYPopupMenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2EDC4F0120E5BCFB0003A85D /* Sources */ = {
@@ -457,6 +503,7 @@
 		};
 		2EDC4F3220E5BCFC0003A85D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E716E308C15A0AB3201DC16 /* Pods-ZXYPopupMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -474,6 +521,7 @@
 		};
 		2EDC4F3320E5BCFC0003A85D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6705FFC8C6BFF84E48FB22A0 /* Pods-ZXYPopupMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
