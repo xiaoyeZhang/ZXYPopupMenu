@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1B8CE0139192753674B8D842 /* libPods-ZXYPopupMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF47D69BB8A7C696794569D /* libPods-ZXYPopupMenu.a */; };
+		2E6A86CB20E9BCD6009D6A1F /* SCInputAccessoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A86C920E9BCD6009D6A1F /* SCInputAccessoryCell.m */; };
+		2E6A86CC20E9BCD6009D6A1F /* SCInputAccessoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E6A86CA20E9BCD6009D6A1F /* SCInputAccessoryCell.xib */; };
 		2EDC4F0A20E5BCFB0003A85D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0920E5BCFB0003A85D /* AppDelegate.m */; };
 		2EDC4F0D20E5BCFB0003A85D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0C20E5BCFB0003A85D /* ViewController.m */; };
 		2EDC4F1020E5BCFB0003A85D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2EDC4F0E20E5BCFB0003A85D /* Main.storyboard */; };
@@ -19,6 +21,7 @@
 		2EDC4F3D20E5BDEE0003A85D /* ZXYPopupMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F3C20E5BDEE0003A85D /* ZXYPopupMenuView.m */; };
 		2EDC4F4020E611BA0003A85D /* ZXYPopupMenuPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F3F20E611BA0003A85D /* ZXYPopupMenuPath.m */; };
 		2EDC4F4420E612730003A85D /* ZXYRectConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EDC4F4320E612730003A85D /* ZXYRectConst.m */; };
+		2EF1174F20EA08F30034B679 /* cellImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EF1174E20EA08F30034B679 /* cellImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E6A86C820E9BCD6009D6A1F /* SCInputAccessoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCInputAccessoryCell.h; sourceTree = "<group>"; };
+		2E6A86C920E9BCD6009D6A1F /* SCInputAccessoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCInputAccessoryCell.m; sourceTree = "<group>"; };
+		2E6A86CA20E9BCD6009D6A1F /* SCInputAccessoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SCInputAccessoryCell.xib; sourceTree = "<group>"; };
 		2EDC4F0520E5BCFB0003A85D /* ZXYPopupMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZXYPopupMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDC4F0820E5BCFB0003A85D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2EDC4F0920E5BCFB0003A85D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 		2EDC4F3F20E611BA0003A85D /* ZXYPopupMenuPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXYPopupMenuPath.m; sourceTree = "<group>"; };
 		2EDC4F4220E612730003A85D /* ZXYRectConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZXYRectConst.h; sourceTree = "<group>"; };
 		2EDC4F4320E612730003A85D /* ZXYRectConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXYRectConst.m; sourceTree = "<group>"; };
+		2EF1174E20EA08F30034B679 /* cellImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellImg.png; sourceTree = "<group>"; };
 		5E716E308C15A0AB3201DC16 /* Pods-ZXYPopupMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXYPopupMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZXYPopupMenu/Pods-ZXYPopupMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		6705FFC8C6BFF84E48FB22A0 /* Pods-ZXYPopupMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXYPopupMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZXYPopupMenu/Pods-ZXYPopupMenu.release.xcconfig"; sourceTree = "<group>"; };
 		6DF47D69BB8A7C696794569D /* libPods-ZXYPopupMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXYPopupMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,10 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				2EDC4F3A20E5BDAE0003A85D /* ZXYPopupMenu */,
+				2EF1174E20EA08F30034B679 /* cellImg.png */,
 				2EDC4F0820E5BCFB0003A85D /* AppDelegate.h */,
 				2EDC4F0920E5BCFB0003A85D /* AppDelegate.m */,
 				2EDC4F0B20E5BCFB0003A85D /* ViewController.h */,
 				2EDC4F0C20E5BCFB0003A85D /* ViewController.m */,
+				2E6A86C820E9BCD6009D6A1F /* SCInputAccessoryCell.h */,
+				2E6A86C920E9BCD6009D6A1F /* SCInputAccessoryCell.m */,
+				2E6A86CA20E9BCD6009D6A1F /* SCInputAccessoryCell.xib */,
 				2EDC4F0E20E5BCFB0003A85D /* Main.storyboard */,
 				2EDC4F1120E5BCFC0003A85D /* Assets.xcassets */,
 				2EDC4F1320E5BCFC0003A85D /* LaunchScreen.storyboard */,
@@ -285,7 +296,9 @@
 			files = (
 				2EDC4F1520E5BCFC0003A85D /* LaunchScreen.storyboard in Resources */,
 				2EDC4F1220E5BCFC0003A85D /* Assets.xcassets in Resources */,
+				2EF1174F20EA08F30034B679 /* cellImg.png in Resources */,
 				2EDC4F1020E5BCFB0003A85D /* Main.storyboard in Resources */,
+				2E6A86CC20E9BCD6009D6A1F /* SCInputAccessoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,7 @@
 				2EDC4F3D20E5BDEE0003A85D /* ZXYPopupMenuView.m in Sources */,
 				2EDC4F4420E612730003A85D /* ZXYRectConst.m in Sources */,
 				2EDC4F0D20E5BCFB0003A85D /* ViewController.m in Sources */,
+				2E6A86CB20E9BCD6009D6A1F /* SCInputAccessoryCell.m in Sources */,
 				2EDC4F1820E5BCFC0003A85D /* main.m in Sources */,
 				2EDC4F4020E611BA0003A85D /* ZXYPopupMenuPath.m in Sources */,
 				2EDC4F0A20E5BCFB0003A85D /* AppDelegate.m in Sources */,
