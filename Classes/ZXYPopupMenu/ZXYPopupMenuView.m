@@ -191,7 +191,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell * tableViewCell = nil;
-    if (self.dataSource && [self.dataSource respondsToSelector:@selector(zxyPopupMenu:didSelectedAtIndex:)]) {
+    if (self.dataSource && [self.dataSource respondsToSelector:@selector(zxyPopupMenu:cellForRowAtIndex:)]) {
         tableViewCell = [self.dataSource zxyPopupMenu:self cellForRowAtIndex:indexPath.row];
     }
     

@@ -21,7 +21,7 @@
 
 NSString *const KCellID = @"cellIDStr";
 
-@interface ViewController ()<ZXYPopupMenuViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate>
+@interface ViewController ()<ZXYPopupMenuViewDelegate,ZXYPopupMenuViewDataSource,UICollectionViewDataSource,UICollectionViewDelegate>
 {
     CGFloat offer;
 }
@@ -195,12 +195,13 @@ NSString *const KCellID = @"cellIDStr";
 }
 - (IBAction)isBtnClick:(UIButton *)sender {
     
-    [ZXYPopupMenuView showRelyOnView:sender titles:TITLESTWO icons:nil menuWidth:80 otherSettings:^(ZXYPopupMenuView *popupMenu) {
-       
-        
-    }];
-}
+    ZXYPopupMenuView *popupMenu=  [ZXYPopupMenuView showRelyOnView:sender titles:TITLESTWO icons:nil menuWidth:80 otherSettings:nil];
     
+    popupMenu.delegate = self;
+    popupMenu.dataSource = self;
+}
+
+
 - (void)zxyPopupMenu:(ZXYPopupMenuView *)zxyPopupMenu didSelectedAtIndex:(NSInteger)index{
     
     //推荐回调
